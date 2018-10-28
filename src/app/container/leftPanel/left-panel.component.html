@@ -1,0 +1,21 @@
+<div fxFlex
+     fxFlexFill
+     fxLayout="row">
+
+  <div fxFlex="25"
+       fxFlexFill
+       fxLayout="column">
+    <h3>Clients</h3>
+    <br>
+    <ul class="overflow-y">
+      <li *ngFor="let client of clients$ | async">
+        <a [routerLink]="['/clients', client.id]">{{ client.name }}</a>
+
+      </li>
+    </ul>
+
+  </div>
+  <div fxFlex="75">
+    <router-outlet></router-outlet>
+  </div>
+</div>

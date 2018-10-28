@@ -1,0 +1,5 @@
+<h3>Client Detail</h3>
+<div *ngIf="client$  | async as client">
+  Client #{{client.id}}
+  <router-outlet></router-outlet>
+</div>

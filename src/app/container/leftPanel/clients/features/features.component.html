@@ -1,0 +1,5 @@
+<ng-container *ngIf="feature$ | async as feature">
+  <h5>Feature Detail</h5>
+    <div>Feature Name: {{ feature.name}}</div>
+    <button (click)="close(feature)">Close Feature detail</button>
+  </ng-container>

@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyDMFzgbuOthpYQsFYSf7ZNQdJP39viWmCo',
+    authDomain: 'timbertrak.firebaseapp.com',
+    databaseURL: 'https://timbertrak.firebaseio.com',
+    projectId: 'timbertrak',
+    storageBucket: 'timbertrak.appspot.com',
+    messagingSenderId: '427373259791'
+  }
 };
 
 /*

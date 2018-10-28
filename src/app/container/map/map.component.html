@@ -1,0 +1,19 @@
+<div fxFlex
+     fxLayout="column">
+
+  <h2>Hi, I'm the Map</h2>
+  <div fxFlex fxLayout="row">
+    <div fxFlex fxLayout="column">
+      <p>Below will appear all the zoom coordinates requested to me</p>
+      <hr>
+      <ul fxFlex="30">
+        <li *ngFor="let c of zoomRequests">- [{{c.lat}},{{c.lng}}]</li>
+      </ul>
+    </div>
+    <div fxFlex="70">
+      <p>The button below simulates a click on the map, getting some geojson value</p>
+      <button (click)="selectFeature(getRandomInt(6))"> Click my Feature</button>
+    </div>
+  </div>
+
+</div>

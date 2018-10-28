@@ -1,0 +1,12 @@
+<ng-container *ngIf="client$ | async as client">
+
+  <div>Client Name: {{ client.name}}</div>
+  <hr>
+  <div>Client Features:</div>
+  <ul class="overflow-y">
+    <li *ngFor="let feature of features$ | async">
+      <a [routerLink]="['/clients/'+client.id+'/features', feature.objectID]">{{ feature.name }}</a>
+    </li>
+  </ul>
+  <button (click)="close()">Close</button>
+</ng-container>
