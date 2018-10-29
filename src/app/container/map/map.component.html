@@ -13,6 +13,10 @@
     <div fxFlex="70">
       <p>The button below simulates a click on the map, getting some geojson value</p>
       <button (click)="selectFeature(getRandomInt(6))"> Click my Feature</button>
+      <br>
+      <br>
+      <p>The button below simulates a change in the client1/Feature A (like changing its coordinates)</p>
+      <button (click)="updateFeature(1)"> Update Feature 1</button>
     </div>
   </div>
 

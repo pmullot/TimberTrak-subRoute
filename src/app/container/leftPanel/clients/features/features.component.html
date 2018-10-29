@@ -1,5 +1,12 @@
 <ng-container *ngIf="feature$ | async as feature">
   <h5>Feature Detail</h5>
     <div>Feature Name: {{ feature.name}}</div>
+    <span>
+      Coordinates:
+      <ul style="padding-left: 2rem">
+        <li>Latitude: {{feature.lat}}</li>
+        <li>Longitude: {{feature.lng}}</li>
+      </ul>
+    </span>
     <button (click)="close(feature)">Close Feature detail</button>
   </ng-container>

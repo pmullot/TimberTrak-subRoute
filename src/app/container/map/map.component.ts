@@ -41,4 +41,12 @@ export class MapComponent implements OnInit {
   public getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max-1)) + 1;
   }
+
+  public updateFeature( FeatureId ){
+    this.fb.getFeature(FeatureId).pipe( take(1) ).subscribe( f => {
+      f.lat = Math.round (Math.random() * 1000)/100;
+      f.lng= Math.round (Math.random() * 1000)/100;
+      this.fb.updateFeature( f );
+    })
+  }
 }
